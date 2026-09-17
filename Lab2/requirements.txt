@@ -1,0 +1,5 @@
+Flask>=2.0
+Werkzeug>=2.0
+Jinja2>=3.0
+itsdangerous>=2.0
+click>=8.0
