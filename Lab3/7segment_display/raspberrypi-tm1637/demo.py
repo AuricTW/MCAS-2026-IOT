@@ -6,11 +6,11 @@ from time import sleep
 
 import tm1637
 
-CLK = 1
-DIO = 0
+CLK = 1     # 請更改至你實際接線的 GPIO 腳位 (BCM GPIO??)
+DIO = 0     # 請更改至你實際接線的 GPIO 腳位 (BCM GPIO??)
 DELAY = 0.5
 
-tm = tm1637.TM1637(clk=CLK, dio=DIO)
+tm = tm1637.TM1637(clk=CLK, dio=DIO) 
 
 # all segments on "88:88"
 tm.write([127, 255, 127, 127])
