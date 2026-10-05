@@ -1,0 +1,5 @@
+websockets==16.0
+pyzmq==27.2.0
+opencv-python==4.14.0.94
+numpy
+google-genai==2.28.0
