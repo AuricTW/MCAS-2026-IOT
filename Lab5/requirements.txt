@@ -2,3 +2,4 @@ websockets==17.1
 pyzmq==27.2.0
 opencv-python==4.14.0.94
 numpy
+google-genai
