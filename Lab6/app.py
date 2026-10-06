@@ -289,7 +289,7 @@ def logout():
 if __name__ == "__main__":
 
     print(
-        "=== Lab8 Flask Server ==="
+        "=== Lab6 Flask Server ==="
     )
 
     print(
