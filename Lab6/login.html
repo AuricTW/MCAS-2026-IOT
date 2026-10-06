@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,
+                 initial-scale=1.0"
+    >
+
+    <title>Lab8 登入</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static',
+                filename='style.css') }}"
+    >
+</head>
+
+<body class="center-page">
+
+    <main class="card login-card">
+
+        <h1>IoT 課程登入</h1>
+
+        <p class="subtitle">
+            Lab8 Flask + Gemini
+        </p>
+
+        <form
+            method="POST"
+            action="/"
+        >
+
+            <label for="username">
+                帳號
+            </label>
+
+            <input
+                id="username"
+                name="username"
+                type="text"
+                required
+            >
+
+            <label for="password">
+                密碼
+            </label>
+
+            <input
+                id="password"
+                name="password"
+                type="password"
+                required
+            >
+
+            {% if msg %}
+
+            <p class="error">
+                {{ msg }}
+            </p>
+
+            {% endif %}
+
+            <button type="submit">
+                登入
+            </button>
+
+        </form>
+
+        <p class="hint">
+            預設帳號：admin / 1234
+        </p>
+
+    </main>
+
+</body>
+</html>
