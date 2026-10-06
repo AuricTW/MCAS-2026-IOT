@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,
+                 initial-scale=1.0"
+    >
+
+    <title>
+        Lab8 Gemini Chat
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static',
+                filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div>
+
+        <strong>
+            Lab8 Gemini Chat
+        </strong>
+
+        <span class="user">
+            登入：{{ username }}
+        </span>
+
+    </div>
+
+    <form
+        method="POST"
+        action="{{ url_for('logout') }}"
+    >
+
+        <button
+            class="secondary"
+            type="submit"
+        >
+            登出
+        </button>
+
+    </form>
+
+</header>
+
+
+<main class="chat-shell">
+
+    <section
+        id="messages"
+        class="messages"
+    >
+
+        <div class="message ai">
+            Gemini：你好，請輸入問題。
+        </div>
+
+    </section>
+
+
+    <form
+        id="chat-form"
+        class="chat-form"
+    >
+
+        <input
+            id="message-input"
+            type="text"
+            placeholder="輸入訊息..."
+            maxlength="2000"
+            autocomplete="off"
+            required
+        >
+
+        <button
+            id="send-button"
+            type="submit"
+        >
+            送出
+        </button>
+
+    </form>
+
+
+    <button
+        id="reset-button"
+        class="secondary reset-button"
+        type="button"
+    >
+        開始新對話
+    </button>
+
+</main>
+
+
+<script
+    src="{{ url_for('static',
+            filename='chat.js') }}"
+>
+</script>
+
+</body>
+</html>
